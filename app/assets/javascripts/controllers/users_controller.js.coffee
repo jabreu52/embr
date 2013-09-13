@@ -5,10 +5,15 @@ App.UsersController = Ember.ArrayController.extend
 
   actions:
     searchUser: ->
-      if @get('searchText')
-        @set 'content', @store.find 'user', { name: @searchText }
-      else
-        @set 'content', @store.find 'user'
+      query = @searchText
+      @set 'filteredUsers', @content
+      if query
+        users = @filteredUsers.filter((user)->
+          regex = new RegExp(query, 'i')
+          if regex.test user.get('name')
+            return user
+        )
+        @set 'filteredUsers', users
 
     deleteUser: (user)->
       @store.deleteRecord(user)

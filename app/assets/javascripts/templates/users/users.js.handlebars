@@ -4,11 +4,11 @@
   Add User
 {{/link-to}}
 
-{{#view App.SearchView }}
+{{#view App.SearchView}}
   {{view Em.TextField valueBinding="searchText" placeholder="Search"}}
 {{/view}}
 
-{{#each controller}}
+{{#each filteredUsers}}
   <li>
     {{#link-to "user" this}}
       {{name}}
