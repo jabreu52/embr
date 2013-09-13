@@ -1,0 +1,3 @@
+h1 New User
+form id="new_user" submit="createUser"
+  = partial "users/form"

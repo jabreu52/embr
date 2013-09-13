@@ -1,0 +1,8 @@
+h1 Groups
+each model
+  li
+    linkTo "group" this
+      = name
+    | &nbsp;
+    = this.users.length
+= outlet

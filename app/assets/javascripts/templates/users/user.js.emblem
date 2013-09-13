@@ -1,0 +1,12 @@
+h1 User
+div
+  img src=image
+div= name
+div= email
+each groups
+  linkTo "group" this
+    = name
+  br
+form id="edit_user" submit="updateUser this"
+  = partial "users/form"
+= outlet

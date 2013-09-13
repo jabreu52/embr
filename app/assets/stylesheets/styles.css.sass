@@ -1,0 +1,14 @@
+// PALETTE
+// MIXINS
+@mixin button-shadow($color)
+  box-shadow: 0 2px 0 darken($color, 10%)
+
+// GLOBAL
+.group:after
+  content: ""
+  display: table
+  clear: both
+
+// FORMS
+button, .button
+  @include button-shadow(#FFF)

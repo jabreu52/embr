@@ -1,0 +1,4 @@
+= input id="user_name" value=name placeholder="Name"
+= input id="user_email" value=email placeholder="Email"
+= input id="user_image" value=image placeholder="Image"
+button type="submit" Submit

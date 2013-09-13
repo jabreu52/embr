@@ -1,0 +1,26 @@
+<h1>Users</h1>
+
+{{#link-to 'users.new'}}
+  Add User
+{{/link-to}}
+
+{{#view App.SearchView }}
+  {{view Em.TextField valueBinding="searchText" placeholder="Search"}}
+{{/view}}
+
+{{#each controller}}
+  <li>
+    {{#link-to "user" this}}
+      {{name}}
+    {{/link-to}}
+    {{email}} {{groups.length}}
+    {{#link-to "user" this}}
+      Edit
+    {{/link-to}}
+    <a {{action deleteUser this}} href="#">
+      Delete
+    </a>
+  </li>
+{{/each}}
+
+{{outlet}}
