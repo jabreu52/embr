@@ -8,7 +8,7 @@
   {{view Em.TextField valueBinding="searchText" placeholder="Search"}}
 {{/view}}
 
-{{#each filteredUsers}}
+{{#each controller}}
   <li>
     {{#link-to "user" this}}
       {{name}}
